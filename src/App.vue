@@ -3,7 +3,7 @@
 
     <router-view/>
 
-    <mt-tabbar>
+    <mt-tabbar class="boxfixed">
       <mt-tabbar v-model="currentTab" fixed>
         <mt-tab-item :id="tab.id" v-for="(tab,idx) in tabs" :key="idx" @click.native="goto(tab.id)">           
                 <p class="icon-box">
@@ -45,7 +45,7 @@
             tabs:[
                     {
                         title:'首页',
-                        id:'Home',
+                        id:'home',
                         icon:'home'
                     },
                     {
@@ -115,7 +115,11 @@
     color: #2c3e50;
     /*margin-top: 60px;*/
   }
-
+.boxfixed{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
   body{
     margin:0;
 }

@@ -5,6 +5,7 @@
 const path = require('path')
 
 module.exports = {
+  progress:'true',
   dev: {
 
     // Paths
@@ -13,9 +14,10 @@ module.exports = {
 
     // 代理服务器
     // 用于跨域请求数据
+    // target:"http://api.douban.com/v2/movie",
     proxyTable: {
         '/api':{
-            target:"http://api.douban.com/v2/movie",
+            target: "https://m.9ji.com",
             changeOrigin: true,
             pathRewrite: {'^/api' : ''}
         }
@@ -83,3 +85,4 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   }
 }
+

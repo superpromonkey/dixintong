@@ -1,6 +1,6 @@
 <template>
 	<div class="citylist">
-		<mt-header title="选择城市">
+		<mt-header title="选择城市" class="city">
 		  <router-link to="/" slot="left">
 		    <mt-button icon="back">返回</mt-button>
 		  </router-link>
@@ -79,5 +79,7 @@
 	}
 </script>
 <style scoped>
-	
+	.city{
+		background-color: red;
+	}
 </style>
